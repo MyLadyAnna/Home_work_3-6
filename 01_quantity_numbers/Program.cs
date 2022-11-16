@@ -1,6 +1,7 @@
 ﻿// Пользователь вводит с клавиатуры M чисел. 
 // Посчитайте, сколько чисел больше 0 ввёл пользователь.
 
+Console.Clear();
 Console.Write("Введите количество чисел: ");
 int quantity = int.Parse(Console.ReadLine() ?? "0");
 int[] massive = new int[quantity];
