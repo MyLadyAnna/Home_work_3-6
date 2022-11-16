@@ -14,14 +14,22 @@ double b2 = Convert.ToDouble(Console.ReadLine() ?? "0");
 
 void GetIntersectionPoint(double k1, double b1, double k2, double b2)
 {
-    if (k1 == k2)
+        if (b1==b2 & k1==k2)
+    {
+        Console.WriteLine($"Прямые y={k1}*x + {b1} и y={k2}*x + {b2} совпадают");
+    }
+    else if (k1 == k2)
     {
         Console.WriteLine($"Прямые y={k1}*x + {b1} и y={k2}*x + {b2} не пересекутся, так как k1 и k2 равны");
     }
     else
     {
-        double x = Math.Round((b2 - b1) / (k1 - k2), 2);             // вывела математически
-        double y = Math.Round(k1 * x + b1, 2);                       // для точности взяла double и оставила 2 знака после запятой
+        double x = (b2 - b1) / (k1 - k2);             // вывела математически
+        double y = k1 * x + b1;      
+
+        x = Math.Round(x,4);
+        y = Math.Round(y,4);
+
         Console.WriteLine($"Точка пересечения двух прямых имеет координаты: [{x}, {y}]");
     }
 }
