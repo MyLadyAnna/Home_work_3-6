@@ -27,10 +27,8 @@ void GetIntersectionPoint(double k1, double b1, double k2, double b2)
         double x = (b2 - b1) / (k1 - k2);             // вывела математически
         double y = k1 * x + b1;      
 
-        x = Math.Round(x,4);
-        y = Math.Round(y,4);
-
-        Console.WriteLine($"Точка пересечения двух прямых имеет координаты: [{x}, {y}]");
+        
+        Console.WriteLine($"Точка пересечения двух прямых имеет координаты: [{x:f4}, {y:f4}]");
     }
 }
 
